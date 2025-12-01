@@ -1,103 +1,138 @@
 # lojabytonalize.
-loja de base tonalize com variedade de cores de base 
-/* --- NOVAS REGRAS PARA INTEGRAÇÃO VISUAL --- */
-
-/* 1. HERO BRAND SECTION (Nova seção de destaque inicial) */
-.hero-brand {
-background-color: #F8F5F1; /* Cor de fundo clara da imagem */
-padding: 80px 5%;
-text-align: center;
-}
-
-.brand-visual {
-padding: 30px;
-background-color: #F8F5F1; /* Garante que o fundo da seção combine com a imagem */
-}
-
-.main-logo-img {
-width: 150px;
-height: auto;
-margin-bottom: 10px;
-}
-
-.hero-brand h1 {
-font-family: serif; /* Use uma fonte mais fina ou sem serifa para imitar o logo */
-font-size: 3em;
-letter-spacing: 5px;
-color: var(--text-dark);
-margin-bottom: 0;
-}
-
-.hero-brand h2 {
-font-size: 1.2em;
-font-weight: 300;
-letter-spacing: 2px;
-color: var(--text-dark);
-margin-top: 5px;
-}
-
-.cta-button-hero {
-display: inline-block;
-background-color: var(--primary-button);
-color: white;
-padding: 15px 40px;
-text-decoration: none;
-border-radius: 50px;
-font-weight: bold;
-margin-top: 30px;
-transition: background-color 0.3s;
-}
-
-/* 2. CTA PROVADOR - INTEGRAÇÃO IMAGEM 3 PASSOS */
-.cta-tester {
-background-color: #EFEBEA; /* Um tom suave de fundo */
-color: var(--text-dark);
-padding: 50px 5%;
-text-align: center;
-}
-
-.steps-image {
-max-width: 700px;
-width: 100%;
-height: auto;
-margin: 30px auto;
-display: block;
-}
-
-.action-button {
-background-color: var(--accent-color); /* Botão de cor mais escura */
-}
-
-/* 3. CATÁLOGO DE PRODUTOS */
-.product-catalog {
-padding: 80px 5%;
-background-color: white;
-}
-
-/* 4. PALETA COMPLETA (Nova Seção) */
-.color-palette-section {
-padding: 80px 5%;
-text-align: center;
-background-color: #F8F5F1;
-}
-
-.palette-image {
-max-width: 800px;
-width: 100%;
-height: auto;
-margin: 40px auto;
-}
-
-.secondary-dark {
-background-color: var(--secondary-button);
-}
-
-/* 5. A MARCA */
-.models-image {
-max-width: 800px;
-width: 100%;
-height: auto;
-margin-top: 30px;
-border-radius: 8px;
-}
-
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONALIZE - Base Líquida com Pump</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --tonalize-gold: #D4AF37;
+            --tonalize-beige: #E8D5C5;
+            --tonalize-brown: #8C6A57;
+            --tonalize-light: #F9F5F2;
+            --tonalize-dark: #5D4037;
+            --tonalize-accent: #B8947A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--tonalize-light);
+            color: var(--tonalize-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER COM LOGO TONALIZE */
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(140, 106, 87, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background: linear-gradient(90deg, var(--tonalize-brown), var(--tonalize-accent));
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--tonalize-brown);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .slogan {
+            font-size: 0.9rem;
+            color: var(--tonalize-accent);
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), 
+                        url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--tonalize-brown);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .hero h1 strong {
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--tonalize-accent);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--tonalize-dark);
+        }
+        
+        /* EMBALAGEM DE PUMP */
+        .pump-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin: 60px 0;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .pump-bottle {
+            width:…
